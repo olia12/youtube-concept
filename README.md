@@ -2,7 +2,7 @@
 Проект выполинла: Попова Ольга
 
 ## Используемые технологии: 
--HTML
--Css
--Normalize.css
--SVG Sprites
+- HTML
+- Css
+- Normalize.css
+- SVG Sprites
