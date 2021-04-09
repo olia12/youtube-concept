@@ -1,8 +1,10 @@
 * {
   box-sizing: border-box;
 }
-.body {
-  font-family: Arial, Helvetica, sans-serif;
+body {
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
 }
 .header {
   display: flex;
@@ -11,6 +13,7 @@
   padding-bottom: 20px;
   padding-left: 32px;
   padding-right: 70px;
+  margin-bottom: 30px;
 }
 .menu-button {
   padding: 0;
@@ -41,17 +44,20 @@
   background: #ebebeb;
   border-radius: 22px;
   display: flex;
+  /* элементы расходятся по разным сторонам */
   justify-content: space-between;
   align-items: center;
   padding-right: 23px;
 }
 .input-search {
+  /* сделаем элемент прозрачным */
   background-color: transparent;
   border: none;
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 23px;
   padding-right: 23px;
+  width: 100%;
 }
 .button-search {
   width: 19px;
@@ -69,12 +75,15 @@
   margin-left: auto;
 }
 .icons-link {
+  /* уберем пробелы(штрихи) между иконками */
   text-decoration: none;
   opacity: 0.24;
 }
+/* эффект при наведении */
 .icons-link:hover {
   opacity: 0.7;
 }
+/* добавим всем иконкам отступы, кроме последнего */
 .icons-link:not(:last-child) {
   margin-right: 50px;
 }
@@ -85,4 +94,49 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
+}
+.sidebar {
+  padding-left: 32px;
+}
+.nav-menu {
+  margin-top: 0;
+  margin-bottom: 60px;
+  padding-left: 0;
+  /* отключает точки в списке ul */
+  list-style: none;
+}
+.nav-item {
+  margin-bottom: 28px;
+  color: #898989;
+}
+.nav-link {
+  color: #898989;
+  text-decoration: none;
+  /* чтобы иконка относительно текста была посередине */
+  display: flex;
+  align-items: center;
+}
+.nav-link:hover {
+  color: #ff0000;
+}
+.nav-link:hover .icon {
+  fill: #ff0000;
+}
+.nav-item .icon {
+  fill: #898989;
+}
+.nav-text {
+  margin-left: 13px;
+}
+.nav-image {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+}
+.nav-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  margin-bottom: 30px;
+  margin-top: 0;
 }
