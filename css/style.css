@@ -14,6 +14,13 @@ body {
   padding-left: 32px;
   padding-right: 70px;
   margin-bottom: 30px;
+  /* фиксируем шапку сайта */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 99;
 }
 .menu-button {
   padding: 0;
@@ -96,7 +103,24 @@ body {
   border-radius: 50%;
 }
 .sidebar {
+  /* фиксируем сайдбар*/
+  position: fixed;
+  width: 17%;
+  left: 0;
   padding-left: 32px;
+  top: 114px;
+  /* сайдбар подстраивается под высоту экрана */
+  height: calc(100% - 114px);
+  /* для прокручивания сайдбара (auto - то есть если контента слишком много, то оно начнет прокручиваться*/
+  overflow-y: auto;
+  background-color: #fff;
+}
+.content {
+  width: 100%;
+  height: 400px;
+  margin-top: 85px;
+  padding-left: 19%;
+  padding-top: 28px;
 }
 .nav-menu {
   margin-top: 0;
@@ -139,4 +163,107 @@ body {
   line-height: 23px;
   margin-bottom: 30px;
   margin-top: 0;
+}
+.channel {
+  position: relative;
+  margin-bottom: 49px;
+}
+.channel-title {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #19202c;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 33px;
+  margin-bottom: 30px;
+}
+.recommended-title {
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 33px;
+  color: #19202c;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+.channal-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.channel-text {
+  margin-left: 20px;
+}
+.video-card {
+  width: 250px;
+}
+.video-thumb {
+  width: 250px;
+  height: 150px;
+  /* картинка обрезается, если карточка вываливается за пределы */
+  overflow: hidden;
+  border-radius: 14px;
+  position: relative;
+}
+.thumbnail {
+  width: 250px;
+  height: 150px;
+  /* определяет, как содержимое заменяемого элемента, такого как <img> или <video>, 
+  должно заполнять контейнер относительно его высоты и ширины */
+  object-fit: cover;
+}
+.video-duration {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #fff;
+  padding: 3px 9px;
+}
+.video-title {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: #19202c;
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+.video-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  line-height: 16px;
+  color: #c2c2c2;
+}
+.video-counter {
+  display: flex;
+}
+.video-views {
+  margin-right: 5px;
+}
+.video-views::after {
+  content: "";
+  width: 2px;
+  height: 2px;
+  background-color: #c2c2c2;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+.channel-button {
+  cursor: pointer;
+}
+.slider-button {
+  position: absolute;
+  right: 11%;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 66px;
+  margin-top: 11px;
 }
